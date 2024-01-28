@@ -1,0 +1,62 @@
+1. type convertions 
+        if the value is nil then the code will break
+
+2. sample input and output for each request 
+        for beginners it will be easy to go through if provided        
+
+
+    read : 
+
+     req 
+
+     req : http://localhost:8080/readings/read/smart-meter-0
+     output : 
+     {
+        "smartMeterId": "smart-meter-0",
+        "electricityReadings": [
+          {
+            "Time": "2024-01-28T14:40:30.867632693+05:30",
+            "Reading": 0.4841259367359506
+          }
+        ]
+      }
+    
+     
+   store : 
+
+    req : 
+           http://localhost:8080/readings/store
+
+        req body : 
+
+        {
+                "smartMeterId": "smart-meter-0",
+                "electricityReadings": [
+                  {
+                    "time": "2024-01-28T17:25:16Z",
+                    "reading": 0.11539118975862511
+                  }
+                ]
+              }
+
+     header :  application/json         
+
+    
+
+
+3. need to mention the specific request methods like get req and postreq  to easy to understand the api
+
+4. log print in lower functions and printing uniform log structure 
+
+level 
+time 
+fileNameWithline 
+msg  - any msg error/normal message
+
+
+5. appropriate  msgs 
+
+a) sample like  req completed or failed 
+b)
+http://localhost:8080/price-plans/recommend
+{"endpoint":"pricePlans","err":"cannot be blank","level":"info","msg":"","time":"2024-01-28T15:16:53+05:30"}
